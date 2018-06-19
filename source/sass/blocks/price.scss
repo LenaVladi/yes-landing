@@ -1,0 +1,15 @@
+.price {
+    padding: 380px 15px 0;
+    background-image: url(../../image/img8-mobile@1x.png);
+    background-size: 80%;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.price__title {
+    @include caption-style;
+}
+
+.price__list {
+    @include ul-none;
+}

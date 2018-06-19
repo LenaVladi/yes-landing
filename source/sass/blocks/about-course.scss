@@ -1,0 +1,20 @@
+.about-course {
+    padding: 43px 15px 0;
+}
+
+.about-course__title {
+    @include caption-style;
+}
+
+.about-course__list {
+    @include ul-none;
+}
+
+.about-course__profile {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.about-course__profile p {
+    padding-right: 15px;
+}

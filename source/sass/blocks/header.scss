@@ -2,9 +2,36 @@
     margin: 0 auto;
     padding: 25px 15px 0;
     min-width: 320px;
+    background-image: url(../../image/img0-mobile@1x.png);
+    background-size: 75%;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 .header__top {
     display: flex;
     justify-content: space-between;
+}
+
+.header__caption {
+    margin: 98% 0 40px;
+    position: relative;
+
+    @include caption-style;
+
+    &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 64px;
+        height: 7px;
+        background-color: $main-color;
+        left: calc(50% - 32px);
+        bottom: -20px;
+    }
+}
+
+.header__caption span {
+    font-size: 18px;
+    display: block;
 }

@@ -1,0 +1,58 @@
+.advertisign {
+    @include mobile-padding;
+}
+
+.advertisign__num {
+    position: relative;
+    font-size: 48px;
+    font-weight: 800;
+    width: 80px;
+    margin: 0 auto;
+    // letter-spacing: 2.4px;
+    letter-spacing: 0.04em;
+    padding: 40px 0 11px;
+
+    &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        background-color: $main-color;
+    }
+
+    &--text {
+        width: 250px;
+        text-transform: lowercase;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.advertisign__title {
+    padding: 15% 18%;
+    margin: 0;
+    background-image: url(../../image/q@1x.png);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+
+    @include caption-style;
+}
+
+.advertisign__text {
+    padding: 0 7%;
+}
+
+.advertisign__list {
+
+    @include ul-none;
+}
+
+.advertisign__img {
+    padding: 10px 0 0;
+}

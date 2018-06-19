@@ -1,0 +1,44 @@
+.decision {
+    padding: 158px 15px 0;
+}
+
+.decision__title {
+    position: relative;
+    padding: 0 7%;
+
+    @include caption-style;
+    
+     &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 64px;
+        height: 7px;
+        background-color: $main-color;
+        left: calc(50% - 32px);
+        bottom: -20px;
+    }
+}
+
+.decision__list {
+    @include ul-none;
+}
+
+.decision__item {
+    padding: 0 55px;
+
+    &:last-child {
+        padding: 0 65px;
+    }
+}
+
+.decision__item p {
+    text-align: left;
+
+    
+}
+
+.decision__sub-title {
+    padding: 53px 0 0;
+    margin: 0;
+}
