@@ -1,0 +1,17 @@
+.nav {
+    @include ul-none;
+}
+
+.nav__prev, .nav__this, .nav__next {
+    display: inline-block;
+    margin: 31px 5px 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $disable-color;
+}
+
+.nav__this {
+    background-color: $main-color;
+    box-shadow: 0 4px 10px rgba(245, 17, 44, 0.58);
+}

@@ -7,4 +7,20 @@
     border: none;
     color: #fff;
     font-weight: 800;
+
+    &--probe {
+        position: relative;
+
+        &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -57px;
+        left: 20px;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        background-color: $decor-color;
+        }
+    }
 }

@@ -1,15 +1,39 @@
 .price {
-    padding: 380px 15px 0;
+    padding: 120% 15px 0;
+    position: relative;
     background-image: url(../../image/img8-mobile@1x.png);
     background-size: 80%;
     background-position: left top;
     background-repeat: no-repeat;
+
+    @include blue-ring;
+    
+    &::before {
+        top: 5%;
+        left: 22%;
+    }
 }
 
 .price__title {
+    position: relative;
+
     @include caption-style;
+    @include caption-after;
 }
 
 .price__list {
     @include ul-none;
+}
+
+.price__desc {
+    padding: 20px 0 0;
+    font-size: 24px;
+}
+
+.price__desc span {
+    color: $main-color;
+}
+
+.price__week span {
+    font-weight: 800;
 }

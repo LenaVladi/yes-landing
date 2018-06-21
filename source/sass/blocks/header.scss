@@ -6,6 +6,27 @@
     background-size: 75%;
     background-position: center top;
     background-repeat: no-repeat;
+
+    @include blue-ring;
+
+    &::before {
+        top: 45%;
+        left: 15%;
+        width: 33px;
+        height: 33px;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $decor-color;
+        border-radius: 50%;
+        top: 20%;
+        right: 15%;
+        width: 23px;
+        height: 23px;
+    }
 }
 
 .header__top {
@@ -18,17 +39,7 @@
     position: relative;
 
     @include caption-style;
-
-    &::after {
-        display: block;
-        position: absolute;
-        content: "";
-        width: 64px;
-        height: 7px;
-        background-color: $main-color;
-        left: calc(50% - 32px);
-        bottom: -20px;
-    }
+    @include caption-after;
 }
 
 .header__caption span {

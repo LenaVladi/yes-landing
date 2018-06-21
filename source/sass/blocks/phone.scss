@@ -1,6 +1,10 @@
 .phone {
     width: 125px;
     text-align: right;
+
+    &--footer {
+        margin: 0 auto;
+    }
 }
 
 .phone__number {

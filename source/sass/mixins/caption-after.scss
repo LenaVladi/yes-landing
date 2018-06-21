@@ -1,0 +1,12 @@
+@mixin caption-after {
+    &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 64px;
+        height: 7px;
+        background-color: $main-color;
+        left: calc(50% - 32px);
+        bottom: -20px;
+    }
+}

@@ -1,0 +1,10 @@
+.footer {
+    @include mobile-padding;
+
+    padding-bottom: 100px;
+}
+
+.footer p {
+    width: 190px;
+    margin: 20px auto;
+}

@@ -1,0 +1,12 @@
+@mixin blue-ring {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        background-color: #fff;
+        box-shadow: 0 0 0 10px $decor-color;
+        border-radius: 50%;
+    }
+}

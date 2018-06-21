@@ -4,6 +4,8 @@
 @import "mixins/ul-none";
 @import "mixins/caption-style";
 @import "mixins/mobile-padding";
+@import "mixins/caption-after";
+@import "mixins/blue-ring";
 
 @import "blocks/header";
 @import "blocks/logo";
@@ -16,5 +18,9 @@
 @import "blocks/description";
 @import "blocks/price";
 @import "blocks/feedback";
+@import "blocks/nav";
+@import "blocks/probe";
 @import "blocks/social";
-@import "blocks/about-course"
+@import "blocks/about-course";
+@import "blocks/wave";
+@import "blocks/footer";

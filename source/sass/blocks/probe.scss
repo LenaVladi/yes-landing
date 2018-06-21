@@ -1,0 +1,19 @@
+.probe {
+    position: relative;
+    padding: 100% 15px 0;
+    background-image: url(../../image/plane-mobile@1x.png);
+    background-size: 200%;
+    background-position: 90% 96px;
+    background-repeat: no-repeat;
+}
+
+.probe__title {
+    position: relative;
+
+    @include caption-style;
+    @include caption-after;
+}
+
+.probe p {
+    padding: 21px 0 10px;
+}

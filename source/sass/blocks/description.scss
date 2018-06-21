@@ -1,3 +1,37 @@
+.description {
+    @include mobile-padding;
+
+    padding-bottom: 20px;
+}
+
 .description__list {
     @include ul-none;
+}
+
+.description__item {
+    padding: 20px 0 0;
+}
+
+.description__task {
+    width: 220px;
+    margin: 0 auto;
+    font-weight: 800;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        width: 13px;
+        height: 10px;
+        background-image: url(../../image/arrow.png);
+    }
+}
+
+.description__title {
+    position: relative;
+
+    @include caption-style;
+    @include caption-after;
 }

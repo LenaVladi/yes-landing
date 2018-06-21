@@ -1,3 +1,41 @@
 .social {
     @include ul-none;
+
+    margin-bottom: 20px;
+}
+
+.social__item {
+    display: inline-block;
+}
+
+.social__link {
+    font-size: 0;
+    display: block;
+    width: 42px;
+    height: 40px;
+    margin: 0;
+
+    &--vk {
+        background-image: url(../../image/vk@1x.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &--insta {
+        background-image: url(../../image/insta@1x.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &--yt {
+        background-image: url(../../image/yt@1x.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &--ok {
+        background-image: url(../../image/ok@1x.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
