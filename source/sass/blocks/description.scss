@@ -1,7 +1,12 @@
 .description {
+    position: relative;
+    background-color: #f8f8f8;
+    margin: 80px 0;
     @include mobile-padding;
+    @include border-decor;
 
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .description__list {

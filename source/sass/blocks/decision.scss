@@ -1,5 +1,13 @@
 .decision {
-    padding: 158px 15px 0;
+    padding: 85px 15px 0;
+
+    @include respond-to($tablet) {
+      padding-top: 120px;
+      background-image: url(../../image/decision-tablet-bg.png);
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 50%;
+    }
 }
 
 .decision__title {
@@ -8,10 +16,19 @@
 
     @include caption-style;
     @include caption-after;
+
+    @include respond-to($tablet) {
+      padding: 0;
+      width: 50%;
+    }
 }
 
 .decision__list {
     @include ul-none;
+
+    @include respond-to($tablet) {
+      display: flex;
+    }
 }
 
 .decision__item {
@@ -20,15 +37,37 @@
     &:last-child {
         padding: 0 65px;
     }
+
+    @include respond-to($tablet) {
+      padding: 0 20px 0 0;
+    }
 }
 
 .decision__item p {
     text-align: left;
-
-    
 }
 
 .decision__sub-title {
+    position: relative;
     padding: 53px 0 0;
     margin: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #f8f8f8;
+      border-radius: 43%;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: -1;
+
+      @include respond-to($tablet) {
+        left: 0;
+        transform: none;
+      }
+    }
 }

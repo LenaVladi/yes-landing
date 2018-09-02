@@ -1,5 +1,15 @@
 .advertisign {
     @include mobile-padding;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background-color: #f8f8f8;
+    position: relative;
+
+    @include border-decor;
+
+    @include respond-to($tablet) {
+      padding-top: 0;
+    }
 }
 
 .advertisign__num {
@@ -8,9 +18,9 @@
     font-weight: 800;
     width: 80px;
     margin: 0 auto;
-    // letter-spacing: 2.4px;
+    line-height: 1;
     letter-spacing: 0.04em;
-    padding: 40px 0 11px;
+    padding: 40px 0 0;
 
     &::after {
         display: block;
@@ -19,7 +29,7 @@
         width: 10px;
         height: 10px;
         right: 0;
-        bottom: 0;
+        bottom: 6px;
         border-radius: 50%;
         background-color: $main-color;
     }
@@ -32,6 +42,19 @@
             display: none;
         }
     }
+
+    @include respond-to($tablet) {
+      position: absolute;
+      width: 70px;
+      left: 50%;
+      top: 5%;
+      transform: translateX(-50%);
+
+      &--text {
+        width: max-content;
+        top: -20px;
+      }
+    }
 }
 
 .advertisign__title {
@@ -42,17 +65,46 @@
     background-position: 90% center;
 
     @include caption-style;
+
+    @include respond-to($tablet) {
+      width: 250px;
+      padding: 7% 0;
+    }
 }
 
 .advertisign__text {
     padding: 0 7%;
+
+    @include respond-to($tablet) {
+      width: 50%;
+      height: max-content;
+    }
 }
 
 .advertisign__list {
-
     @include ul-none;
 }
 
 .advertisign__img {
     padding: 10px 0 0;
+
+    @include respond-to($tablet) {
+      width: 50%;
+      height: 100%;
+    }
+}
+
+.advertisign__item {
+  @include respond-to($tablet) {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 40px 0;
+
+    &:nth-child(even) {
+      .advertisign__img {
+        order: -1;
+      }
+    }
+  }
 }

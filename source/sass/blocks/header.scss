@@ -6,14 +6,30 @@
     background-size: 75%;
     background-position: center top;
     background-repeat: no-repeat;
+    position: relative;
 
     @include blue-ring;
+
+    @include respond-to($tablet) {
+      padding-bottom: 40px;
+      background-image: url(../../image/tablet-bg.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
     &::before {
         top: 45%;
         left: 15%;
         width: 33px;
         height: 33px;
+
+        @include respond-to($tablet) {
+          left: 4%;
+          width: 50px;
+          height: 50px;
+          z-index: -1;
+        }
     }
 
     &::after {
@@ -32,6 +48,21 @@
 .header__top {
     display: flex;
     justify-content: space-between;
+
+    @include respond-to($tablet) {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 0 20px;
+    }
+}
+
+.header__inner {
+  @include respond-to($tablet) {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+  }
 }
 
 .header__caption {
@@ -40,9 +71,39 @@
 
     @include caption-style;
     @include caption-after;
+
+    @include respond-to($tablet) {
+      margin-top: 25%;
+    }
 }
 
 .header__caption span {
     font-size: 18px;
     display: block;
+}
+
+.header__address {
+  margin: 0;
+}
+
+.header__text {
+  @include respond-to($tablet) {
+    position: relative;
+  }
+}
+
+.header__app {
+  @include respond-to($tablet) {
+    margin-top: 40px;
+  }
+}
+
+.header__wrap {
+  @include respond-to($tablet) {
+      padding: 5% 5% 5% 40%;
+      background-image: url(../../image/img0-mobile@1x.png);
+      background-size: 40%;
+      background-position: left center;
+      background-repeat: no-repeat;
+  }
 }

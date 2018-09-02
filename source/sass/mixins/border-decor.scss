@@ -1,0 +1,33 @@
+@mixin border-decor {
+  &::before, &::after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 100%;
+    background: #f8f8f8;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+
+    @include respond-to($tablet) {
+      height: 90px;
+    }
+  }
+
+  &::before {
+    top: -13px;
+
+    @include respond-to($tablet) {
+      top: -39px;
+    }
+  }
+
+  &::after {
+    bottom: -13px;
+
+    @include respond-to($tablet) {
+      bottom: -39px;
+    }
+  }
+}

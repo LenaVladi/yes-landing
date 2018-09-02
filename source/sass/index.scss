@@ -1,11 +1,13 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "scaffolding";
 @import "var";
+@import "mixins/mediaqueries";
 @import "mixins/ul-none";
 @import "mixins/caption-style";
 @import "mixins/mobile-padding";
 @import "mixins/caption-after";
 @import "mixins/blue-ring";
+@import "mixins/border-decor";
 
 @import "blocks/header";
 @import "blocks/logo";

@@ -7,10 +7,25 @@
     background-repeat: no-repeat;
 
     @include blue-ring;
-    
+
     &::before {
         top: 5%;
         left: 22%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 7%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 150px;
+      background-color: #fff;
+      box-shadow: 0 0 0 40px #f8f8f8;
+      border-radius: 50%;
+      z-index: -1;
     }
 }
 

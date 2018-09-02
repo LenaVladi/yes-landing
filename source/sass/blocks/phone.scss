@@ -2,6 +2,12 @@
     width: 125px;
     text-align: right;
 
+    @include respond-to($tablet) {
+      display: flex;
+      width: max-content;
+      justify-content: flex-end;
+    }
+
     &--footer {
         margin: 0 auto;
     }
@@ -9,11 +15,16 @@
 
 .phone__number {
     color: black;
+
+    @include respond-to($tablet) {
+      margin: 0 20px;
+    }
 }
 
-.phone button {
+.phone__order-cell {
     color: $main-color;
     border: none;
+    line-height: 1.8;
     border-bottom: 2px solid $main-color;
     background-color: transparent;
 }
