@@ -27,6 +27,65 @@
       border-radius: 50%;
       z-index: -1;
     }
+
+    @include respond-to($desktop) {
+        padding-top: 100px;
+        background-image: none;
+
+        &::before, &::after {
+            display: none;
+        }
+    }
+}
+
+.price__inner {
+    @include inner;
+
+    @include respond-to($desktop) {
+        position: relative;
+        padding-left: 400px;
+        text-align: left;
+    }
+}
+
+.price__bg {
+    @include respond-to($desktop) {
+        position: absolute;
+        top: -100px;
+        bottom: 0;
+        height: 115%;
+        width: 100%;
+        left: -800px;
+        background-image: url(../../image/img8-mobile@1x.png);
+        background-size: contain;
+        background-position: right top;
+        background-repeat: no-repeat;
+
+        @include blue-ring;
+
+        &::before {
+            top: 18%;
+            left: 53%;
+            width: 133px;
+            height: 133px;
+            box-shadow: 0 0 0 30px #2429ff;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 35%;
+            left: 70%;
+            transform: translateX(-50%);
+            width: 550px;
+            height: 550px;
+            background-color: #fff;
+            box-shadow: 0 0 0 100px #f8f8f8;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
 }
 
 .price__title {
@@ -36,13 +95,40 @@
     @include caption-after;
 }
 
+.price__title-bg {
+    @include respond-to($desktop) {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -60px;
+        width: 220px;
+        height: 220px;
+        background-image: url(../../image/q@1x.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        padding: 60px 0;
+        margin: 0;
+    }
+}
+
 .price__list {
     @include ul-none;
+
+    @include respond-to($desktop) {
+        columns: 2;
+    }
 }
 
 .price__desc {
     padding: 20px 0 0;
     font-size: 24px;
+
+    @include respond-to($desktop) {
+        font-size: 50px;
+        margin: 0;
+        line-height: normal;
+    }
 }
 
 .price__desc span {

@@ -21,6 +21,18 @@
         height: 23px;
         border-radius: 50%;
         background-color: $decor-color;
+
+             @include respond-to($desktop) {
+                left: -300px;
+                bottom: -27px;
+             }
         }
+    }
+
+    @include respond-to($desktop) {
+        width: 370px;
+        height: 70px;
+        border-radius: 41px;
+        box-shadow: none;
     }
 }

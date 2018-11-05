@@ -10,6 +10,21 @@
     @include respond-to($tablet) {
       padding-top: 0;
     }
+
+    @include respond-to($desktop) {
+      padding-top: 80px;
+      background-color: transparent;
+
+      &::before {
+        width: 200%;
+        height: 105%;
+        left: -70%;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
 }
 
 .advertisign__num {
@@ -70,6 +85,13 @@
       width: 250px;
       padding: 7% 0;
     }
+
+    @include respond-to($desktop) {
+      padding: 3% 3% 3% 0;
+      background-position: right center;
+      background-size: contain;
+      width: 440px;
+    }
 }
 
 .advertisign__text {
@@ -79,10 +101,18 @@
       width: 50%;
       height: max-content;
     }
+
+    @include respond-to($desktop) {
+      text-align: left;
+    }
 }
 
 .advertisign__list {
     @include ul-none;
+
+    @include respond-to($desktop) {
+      margin-top: -80px;
+    }
 }
 
 .advertisign__img {
@@ -91,6 +121,10 @@
     @include respond-to($tablet) {
       width: 50%;
       height: 100%;
+    }
+
+    @include respond-to($desktop) {
+      width: 40%;
     }
 }
 
@@ -106,5 +140,60 @@
         order: -1;
       }
     }
+  }
+
+  @include respond-to($desktop) {
+    justify-content: flex-end;  
+
+    &:nth-child(even) {
+      justify-content: flex-start;  
+    }
+    &:nth-child(1) {
+      .advertisign__text {
+        width: 35%;
+      }
+
+      .advertisign__num {
+        left: 60%;
+      }
+    }
+
+    &:nth-child(2) {
+      .advertisign__num {
+        left: 40%;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-top: -120px;
+
+      .advertisign__text {
+        width: 45%;
+      }
+
+      .advertisign__num {
+        left: 70%;
+      }
+
+      .advertisign__img {
+        width: 30%;
+      }
+    }
+
+    &:nth-child(4) {
+      .advertisign__text {
+        width: 40%;
+      }
+
+      .advertisign__img {
+        width: 50%;
+      }
+
+      .advertisign__num {
+        top: 5%;
+        left: 55%;
+      }
+    }
+
   }
 }

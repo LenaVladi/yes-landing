@@ -1,0 +1,6 @@
+@mixin inner {
+    @include respond-to($desktop) {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+}

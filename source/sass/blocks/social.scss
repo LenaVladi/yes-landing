@@ -2,6 +2,11 @@
     @include ul-none;
 
     margin-bottom: 20px;
+
+    @include respond-to($desktop) {
+        position: absolute;
+        top: 0;
+    }
 }
 
 .social__item {

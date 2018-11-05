@@ -23,7 +23,6 @@ html {
   box-sizing: inherit;
 }
 
-
 img {
   max-width: 100%;
 }
@@ -46,6 +45,10 @@ body {
   @media (min-width: 641px) and (max-width: 1024px) {
     text-align: left;
   }
+
+  @media (min-width: 1025px) {
+    font-size: 18px;
+  }
 }
 
 .mobile-hidden {
@@ -60,6 +63,11 @@ body {
   @media (min-width: 640px) {
     max-width: 755px;
     margin: 0 auto;
+  }
+
+  @media (min-width: 1025px) {
+      max-width: 1170px;
+      margin: 0 auto;
   }
 }
 

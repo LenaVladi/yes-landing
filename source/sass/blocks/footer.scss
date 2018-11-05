@@ -6,7 +6,56 @@
     background-color: #f8f8f8;
 }
 
+.footer__inner {
+    @include inner;
+
+    @include respond-to($desktop) {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+}
+
+.footer__logo-wrap {
+    @include respond-to($desktop) {
+        text-align: left;
+        width: 30%;
+    }
+}
+
 .footer p {
     width: 190px;
     margin: 20px auto;
+
+    @include respond-to($desktop) {
+        margin: 0;
+    }
+}
+
+.footer p span {
+    @include respond-to($desktop) {
+        display: none;
+    }
+}
+
+p.footer__logo-desc {
+    display: none;
+
+    @include respond-to($desktop) {
+        display: block;
+        text-align: left;
+        margin: 0;
+    }
+}
+
+.footer__contact {
+     @include respond-to($desktop) {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 80%;
+        padding-top: 0;
+        margin-top: -20px;
+     }
 }

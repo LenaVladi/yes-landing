@@ -5,4 +5,12 @@
 .profile__img {
     text-align: center;
     margin: 0 auto;
+
+     @include respond-to($desktop) {
+         width: 100%;
+     }
+}
+
+.profile p {
+    font-size: 14px;
 }

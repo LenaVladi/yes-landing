@@ -12,5 +12,9 @@
         @include respond-to($tablet) {
           left: 0;
         }
+
+        @include respond-to($desktop) {
+          bottom: -30px;
+        }
     }
 }

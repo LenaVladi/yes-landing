@@ -2,6 +2,10 @@
     @include mobile-padding;
 }
 
+.feedback__inner {
+    @include inner;
+}
+
 .feedback__title {
     position: relative;
 
@@ -17,14 +21,35 @@
     display: none;
     padding: 40px 0 0;
 
-    &:first-child {
-        display: block;
+    @include respond-to($desktop) {
+        display: none;
+  
     }
+
+    &.active {
+        display: block;
+
+        @include respond-to($desktop) {
+            display: flex;
+        }
+    }
+}
+
+.feedback__item-text {
+     @include respond-to($desktop) {
+         text-align: left;
+     }
 }
 
 .feedback__img {
     display: block;
     margin: 0 auto 20px;
+
+     @include respond-to($desktop) {
+        width: 100%;
+        height: 100%;
+        margin-right: 20px;
+     }
 }
 
 .feedback__link-user {

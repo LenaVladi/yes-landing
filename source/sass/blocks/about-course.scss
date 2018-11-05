@@ -2,17 +2,29 @@
     padding: 43px 15px 0;
 }
 
+.about-course__inner {
+    @include inner;
+}
+
 .about-course__title {
     @include caption-style;
 }
 
 .about-course__list {
     @include ul-none;
+
+    @include respond-to($desktop) {
+        display: flex;
+    }
 }
 
 .about-course__profile {
-    // text-align: left;
     margin-bottom: 40px;
+
+    @include respond-to($desktop) {
+        width: 30%;
+        margin-right: 40px;
+    }
 }
 
 .about-course__profile p {

@@ -5,6 +5,12 @@
     background-image: url(../../image/wave.png );
     background-repeat: no-repeat;
 
+     @include respond-to($desktop) {
+         width: 140px;
+         height: 20px;
+         background-size: 100%;
+     }
+
     &--top {
         top: 21%;
         right: 3%;
@@ -20,10 +26,37 @@
             border-radius: 50%;
             background-color: $decor-color;
         }
+
+         @include respond-to($desktop) {
+            top: 0;
+            left: 80%;
+
+             &::after {
+                top: 120px;
+                right: -20px;
+             }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 160px;
+                right: -100px;
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background-color: $decor-color;
+            }
+        }
     }
 
     &--bottom {
         top: 47%;
+
+        @include respond-to($desktop) {
+            top: 17%;
+            left: 40%;
+        }
     }
 
     &--bottom-price {
@@ -31,9 +64,19 @@
         height: 15px;
         top: 13%;
         right: 10%;
+
+        @include respond-to($desktop) {
+            top: 70%;
+            right: 70%;
+            width: 144px;
+            height: 20px;
+            background-size: contain;
+        }
     }
 
     &--header {
       right: 0;
     }
+
+
 }

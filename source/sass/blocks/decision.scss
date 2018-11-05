@@ -8,6 +8,15 @@
       background-position: right top;
       background-size: 50%;
     }
+
+    @include respond-to($desktop) {
+        background-size: contain;
+        padding-top: 140px;
+    }
+}
+
+.decision__inner {
+    @include inner;
 }
 
 .decision__title {
@@ -21,6 +30,11 @@
       padding: 0;
       width: 50%;
     }
+
+    @include respond-to($desktop) {
+        font-size: 50px;
+        text-align: left;
+    }
 }
 
 .decision__list {
@@ -28,6 +42,10 @@
 
     @include respond-to($tablet) {
       display: flex;
+    }
+
+    @include respond-to($desktop) {
+        width: 80%;
     }
 }
 
@@ -40,6 +58,11 @@
 
     @include respond-to($tablet) {
       padding: 0 20px 0 0;
+    }
+
+    @include respond-to($desktop) {
+        padding: 0 20px 0;
+        text-align: left;
     }
 }
 
@@ -68,6 +91,10 @@
       @include respond-to($tablet) {
         left: 0;
         transform: none;
+      }
+
+      @include respond-to($desktop) {
+          left: -25px;
       }
     }
 }

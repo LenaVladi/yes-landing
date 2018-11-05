@@ -1,0 +1,7 @@
+.center {
+    @include respond-to($tablet) {
+        width: 720px;
+        position: relative;
+        margin: 0 auto;
+    }
+}

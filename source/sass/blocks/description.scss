@@ -7,6 +7,31 @@
 
     padding-top: 50px;
     padding-bottom: 50px;
+
+    @include respond-to($desktop) {
+        background-color: transparent;
+
+        &::before {
+            width: 120%;
+            height: 100%;
+            top: 0;
+            left: -10%;
+        }
+
+        &::after {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            box-shadow: 0 0 0 80px #f8f8f8;
+            z-index: -2;
+            right: 10%;
+            left: auto;
+        }
+    }
+}
+
+.description__inner {
+    @include inner;
 }
 
 .description__list {
@@ -15,6 +40,31 @@
 
 .description__item {
     padding: 20px 0 0;
+
+    @include respond-to($desktop) {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin: 40px 0;
+
+        &:nth-child(even) {
+            img {
+                order: -1;
+            }
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+.description__item-wrap {
+    @include respond-to($desktop) {
+        text-align: left;
+        padding: 0 50px;
+        width: 50%;
+    }
 }
 
 .description__task {
@@ -31,6 +81,15 @@
         width: 13px;
         height: 10px;
         background-image: url(../../image/arrow.png);
+    }
+
+    @include respond-to($desktop) {
+        margin: 0;
+
+        &::before {
+            left: -30px;
+            top: 10px;
+        }
     }
 }
 

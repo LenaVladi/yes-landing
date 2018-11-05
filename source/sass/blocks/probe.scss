@@ -5,6 +5,13 @@
     background-size: 200%;
     background-position: 90% 96px;
     background-repeat: no-repeat;
+
+    @include respond-to($desktop) {
+        padding-top: 110px;
+        margin: 80px 0;
+        background-size: 85%;
+        background-position: -200% -10%;
+    }
 }
 
 .probe__title {
@@ -16,4 +23,11 @@
 
 .probe p {
     padding: 21px 0 10px;
+}
+
+.probe__inner {
+    @include inner;
+
+    padding-left: 45%;
+    text-align: left;
 }
