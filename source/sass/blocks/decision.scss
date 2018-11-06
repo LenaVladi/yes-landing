@@ -10,8 +10,13 @@
     }
 
     @include respond-to($desktop) {
+        background-image: url(../../image/desktop/decision-bg-desktop@1x.png);
         background-size: contain;
         padding-top: 140px;
+
+        @include respond-to($tablet) {
+            background-image: url(../../image/desktop/decision-bg-desktop@2x.png);
+        }
     }
 }
 

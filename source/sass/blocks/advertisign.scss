@@ -81,6 +81,10 @@
 
     @include caption-style;
 
+    @include respond-to($retina) {
+      background-image: url(../../image/q@2x.png);
+    }
+
     @include respond-to($tablet) {
       width: 250px;
       padding: 7% 0;
@@ -135,9 +139,14 @@
     align-items: center;
     margin: 40px 0;
 
+    .advertisign__img {
+      width: 100%;
+    }
+
     &:nth-child(even) {
-      .advertisign__img {
+      .advertisign__picture {
         order: -1;
+        width: 50%;
       }
     }
   }
@@ -148,6 +157,7 @@
     &:nth-child(even) {
       justify-content: flex-start;  
     }
+
     &:nth-child(1) {
       .advertisign__text {
         width: 35%;
@@ -175,7 +185,7 @@
         left: 70%;
       }
 
-      .advertisign__img {
+      .advertisign__picture {
         width: 30%;
       }
     }
@@ -185,7 +195,7 @@
         width: 40%;
       }
 
-      .advertisign__img {
+      .advertisign__picture {
         width: 50%;
       }
 

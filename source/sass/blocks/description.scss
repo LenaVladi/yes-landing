@@ -47,14 +47,18 @@
         align-items: center;
         margin: 40px 0;
 
-        &:nth-child(even) {
-            img {
-                order: -1;
+        &:nth-child(odd) {
+            .description__item-wrap {
+                order: 2;
             }
         }
 
-        img {
+        .description__picture {
             width: 50%;
+        }
+
+        .description__picture img {
+            width: 100%;
         }
     }
 }
@@ -80,7 +84,7 @@
         bottom: 5px;
         width: 13px;
         height: 10px;
-        background-image: url(../../image/arrow.png);
+        background-image: url(../../image/arrow.svg);
     }
 
     @include respond-to($desktop) {

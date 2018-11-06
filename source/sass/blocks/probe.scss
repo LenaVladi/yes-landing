@@ -1,16 +1,25 @@
 .probe {
     position: relative;
     padding: 100% 15px 0;
-    background-image: url(../../image/plane-mobile@1x.png);
-    background-size: 200%;
-    background-position: 90% 96px;
+    background-image: url(../../image/mobile/probe-bg-mobile@1x.png);
+    background-size: 50%;
+    background-position: left center;
     background-repeat: no-repeat;
+
+    @include respond-to($retina) {
+        background-image: url(../../image/mobile/probe-bg-mobile@2x.png);
+    }
 
     @include respond-to($desktop) {
         padding-top: 110px;
         margin: 80px 0;
-        background-size: 85%;
-        background-position: -200% -10%;
+        background-image: url(../../image/desktop/probe-bg-desktop@1x.png);
+        background-size: 50%;
+        background-position: left center;
+
+        @include respond-to($retina) {
+            background-image: url(../../image/desktop/probe-bg-desktop@2x.png);
+        }
     }
 }
 

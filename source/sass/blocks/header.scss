@@ -2,7 +2,7 @@
     margin: 0 auto;
     padding: 25px 15px 0;
     min-width: 320px;
-    background-image: url(../../image/img0-mobile@1x.png);
+    background-image: url(../../image/mobile/intro-bg-mobile@1x.png);
     background-size: 75%;
     background-position: center top;
     background-repeat: no-repeat;
@@ -10,9 +10,13 @@
 
     @include blue-ring;
 
+    @include respond-to($retina) {
+      background-image: url(../../image/mobile/intro-bg-mobile@2x.png);
+    }
+
     @include respond-to($tablet) {
       padding-bottom: 40px;
-      background-image: url(../../image/tablet-bg.png);
+      background-image: url(../../image/tablet/intro-text-bg-tablet.png);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -124,7 +128,11 @@
   @include respond-to($desktop) {
     padding: 5% 5% 5% 28%;
     text-align: left;
-    // background-position: left bottom;
+    background-image: url(../../image/desktop/intro-bg-desktop@1x.png);
+
+    @include respond-to($retina) {
+      background-image: url(../../image/desktop/intro-bg-desktop@2x.png);
+    }
   }
 }
 

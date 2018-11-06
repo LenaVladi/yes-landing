@@ -20,6 +20,10 @@
     @include respond-to($desktop) {
         text-align: left;
         width: 30%;
+
+        img {
+            width: 60px;
+        }
     }
 }
 
