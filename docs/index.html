@@ -11,7 +11,10 @@
     <header class="header">
         <div class="header__top">
             <a class="logo header__logo">
-                <img src="image/-yes@1x.png" alt=".YES" class="logo__img">
+                <picture>
+                    <source type="image/webp" srcset="image/-yes@1x.webp 1x, image/-yes@1x.webp 2x">
+                    <img class="media__photo" src="image/-yes@1x.png" srcset="image/-yes@2x.png 2x" alt=".YES">
+                </picture>
             </a>
             <div class="header__inner center-wrap">
               <p class="header__address mobile-hidden">г. Москва ул. Северная, 35</p>
@@ -168,28 +171,51 @@
                     <p class="description__task">Простое запоминание</p>
                     <p>Слова запоминаются в результате упрощенных техник и применения в спонтанных ситуациях, а не посредством зубрежки</p>
                     </div>
-                    <img src="image/img9-mobile@1x.png" alt="Простое запоминание">
+                    <picture class="description__img">
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="image/desktop/description-img1-desktop@1x.webp 1x, image/desktop/description-img1-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="image/mobile/description-img1-mobile@1x.webp 1x, image/mobile/description-img1-mobile@2x.webp 2x">
+                        <source media="(min-width: 1200px)" srcset="image/desktop/description-img1-desktop@1x.png 1x, image/desktop/description-img1-desktop@2x.png 2x">
+                        <img class="description__img" src="image/mobile/description-img1-mobile@1x.png" srcset="image/mobile/description-img1-mobile@2x.png 2x" alt="Простое запоминание">
+                    </picture>
                 </li>
                 <li class="description__item">
                     <div class="description__item-wrap">
                     <p class="description__task">Импровизация и диалоги</p>
                     <p>Форма импровизации позволяет подготовиться к ситуации, когда шаблонные ответы будут неприменимы</p>
                     </div>
-                    <img src="image/img10-mobile@1x.png" alt="Импровизация и диалоги">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="image/desktop/description-img2-desktop@1x.webp 1x, image/desktop/description-img2-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="image/mobile/description-img2-mobile@1x.webp 1x, image/mobile/description-img2-mobile@2x.webp 2x">
+                        <source media="(min-width: 1200px)" srcset="image/desktop/description-img2-desktop@1x.png 1x, image/desktop/description-img2-desktop@2x.png 2x">
+                        <img class="description__img" src="image/mobile/description-img2-mobile@1x.png" srcset="image/mobile/description-img2-mobile@2x.png 2x"
+                            alt="Импровизация и диалоги">
+                    </picture>
                 </li>
                 <li class="description__item">
                     <div class="description__item-wrap">
                     <p class="description__task">Говорим и слушаем</p>
                     <p>Прослушивание себя и профессионалов позволит научиться воспринимать чужую речь на слух</p>
                     </div>
-                    <img src="image/img11-mobile@1x.png" alt="Говорим и слушаем">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="image/desktop/description-img3-desktop@1x.webp 1x, image/desktop/description-img3-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="image/mobile/description-img3-mobile@1x.webp 1x, image/mobile/description-img3-mobile@2x.webp 2x">
+                        <source media="(min-width: 1200px)" srcset="image/desktop/description-img3-desktop@1x.png 1x, image/desktop/description-img3-desktop@2x.png 2x">
+                        <img class="description__img" src="image/mobile/description-img3-mobile@1x.png" srcset="image/mobile/description-img3-mobile@2x.png 2x"
+                            alt="Говорим и слушаем">
+                    </picture>
                 </li>
                 <li class="description__item">
                     <div class="description__item-wrap">
                     <p class="description__task">Повторение</p>
                     <p>Каждое следующее занятие включает в себя закрепление предыдущих тем и создает базу для прохождения следующих</p>
                     </div>
-                    <img src="image/img12-mobile@1x.png" alt="Повторение">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="image/desktop/description-img4-desktop@1x.webp 1x, image/desktop/description-img4-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="image/mobile/description-img4-mobile@1x.webp 1x, image/mobile/description-img4-mobile@2x.webp 2x">
+                        <source media="(min-width: 1200px)" srcset="image/desktop/description-img4-desktop@1x.png 1x, image/desktop/description-img4-desktop@2x.png 2x">
+                        <img class="description__img" src="image/mobile/description-img4-mobile@1x.png" srcset="image/mobile/description-img4-mobile@2x.png 2x"
+                            alt="Повторение">
+                    </picture>
                 </li>
             </ul>
             </div>
