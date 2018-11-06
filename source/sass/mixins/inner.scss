@@ -1,4 +1,9 @@
 @mixin inner {
+    @include respond-to($tablet) {
+        max-width: 755px;
+        margin: 0 auto;
+    }
+
     @include respond-to($desktop) {
         max-width: 1170px;
         margin: 0 auto;

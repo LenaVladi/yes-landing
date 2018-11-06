@@ -3,8 +3,14 @@
     line-height: 1.2;
     text-transform: uppercase;
 
-     @include respond-to($desktop) {
-         font-size: 50px;
-         text-align: left;
-     }
+    @include respond-to($tablet) {
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-align: left;
+    }
+
+    @include respond-to($desktop) {
+        font-size: 50px;
+        text-align: left;
+    }
 }
