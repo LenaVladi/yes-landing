@@ -6,6 +6,14 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var minify = require("gulp-csso");
+var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
+var rename = require("gulp-rename");
+var uglify = require("gulp-uglify");
+var htmlmin = require('gulp-htmlmin');
+var pump = require("pump");
+var run = require("run-sequence");
 
 gulp.task("style", function() {
   gulp.src("source/sass/index.scss")
@@ -14,7 +22,10 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("docs/css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(server.stream());
 });
 
@@ -29,4 +40,61 @@ gulp.task("serve", ["style"], function() {
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html").on("change", server.reload);
+});
+
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("docs"))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("docs"));
+});
+
+gulp.task("images", function () {
+  return gulp.src("source/image/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("docs/image"));
+});
+
+gulp.task("webp", function () {
+  return gulp.src("source/image/**/*.{png,jpg}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("docs/image"));
+});
+
+gulp.task("copy", function () {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/image/**",
+    "source/js/**"
+  ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("docs"));
+});
+
+var del = require("del");
+gulp.task("clean", function () {
+  return del("docs");
+});
+
+gulp.task("compress", function (cb) {
+  pump([
+    gulp.src("source/js/*.js"),
+    uglify()
+  ],
+    cb
+  )
+    .pipe(rename(function (path) {
+      path.basename += ".min"
+    }))
+    .pipe(gulp.dest("docs/js"));
+});
+
+gulp.task("build", function (done) {
+  run("clean", "copy", "style", "images", "webp", "html", "compress", done);
 });
