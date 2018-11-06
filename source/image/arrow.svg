@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 10" width="14" height="10">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #f5112c } 
+	</style>
+	<path id="стрелка копия 3" class="shp0" d="M0,6h13v-2h-13zM5.55,2.43l6.17,3.33l0.95,-1.76l-6.17,-3.33zM11.5,4.67l-6.17,3.33l0.95,1.76l6.17,-3.33z" />
+</svg>
