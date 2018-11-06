@@ -1,14 +1,14 @@
 .description {
     position: relative;
     background-color: #f8f8f8;
-    margin: 80px 0;
+    margin: 80px auto;
     @include mobile-padding;
     @include border-decor;
 
     padding-top: 50px;
     padding-bottom: 50px;
 
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         background-color: transparent;
 
         &::before {
@@ -28,6 +28,10 @@
             left: auto;
         }
     }
+
+    @include respond-to($desktop) {
+        // inherit tablet
+    }
 }
 
 .description__inner {
@@ -41,11 +45,17 @@
 .description__item {
     padding: 20px 0 0;
 
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         display: flex;
         position: relative;
         align-items: center;
         margin: 40px 0;
+
+        .description__item-wrap {
+            width: 60%;
+            padding: 0 50px;
+            text-align: left;
+        }
 
         &:nth-child(odd) {
             .description__item-wrap {
@@ -61,13 +71,13 @@
             width: 100%;
         }
     }
-}
 
-.description__item-wrap {
     @include respond-to($desktop) {
-        text-align: left;
-        padding: 0 50px;
-        width: 50%;
+        // inherit tablet
+
+        .description__item-wrap {
+            width: auto;
+        }
     }
 }
 
@@ -84,16 +94,20 @@
         bottom: 5px;
         width: 13px;
         height: 10px;
-        background-image: url(../../image/arrow.svg);
+        background-image: url(../image/arrow.svg);
     }
 
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         margin: 0;
 
         &::before {
             left: -30px;
             top: 10px;
         }
+    }
+
+    @include respond-to($tablet) {
+        //inherit tablet
     }
 }
 

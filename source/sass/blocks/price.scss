@@ -1,7 +1,7 @@
 .price {
     padding: 120% 15px 0;
     position: relative;
-    background-image: url(../../image/mobile/price-bg-mobile@1x.png);
+    background-image: url(../image/mobile/price-bg-mobile@1x.png);
     background-size: 80%;
     background-position: left top;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
     @include blue-ring;
 
     @include respond-to($retina) {
-        background-image: url(../../image/mobile/price-bg-mobile@2x.png);
+        background-image: url(../image/mobile/price-bg-mobile@2x.png);
     }
 
     &::before {
@@ -32,7 +32,7 @@
       z-index: -1;
     }
 
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         padding-top: 100px;
         background-image: none;
 
@@ -40,40 +40,48 @@
             display: none;
         }
     }
+
+    @include respond-to($desktop) {
+        // inherit tablet
+    }
 }
 
 .price__inner {
     @include inner;
 
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         position: relative;
-        padding-left: 400px;
+        padding-left: 200px;
         text-align: left;
+    }
+
+    @include respond-to($desktop) {
+        padding-left: 400px;
     }
 }
 
 .price__bg {
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         position: absolute;
-        top: -100px;
+        top: 0;
         bottom: 0;
-        height: 115%;
+        height: 100%;
         width: 100%;
-        left: -800px;
-        background-image: url(../../image/desktop/price-bg-desktop@1x.png);
+        left: -570px;
+        background-image: url(../image/desktop/price-bg-desktop@1x.png);
         background-size: contain;
         background-position: right top;
         background-repeat: no-repeat;
 
         @include respond-to($retina) {
-            background-image: url(../../image/desktop/price-bg-desktop@2x.png);
+            background-image: url(../image/desktop/price-bg-desktop@2x.png);
         }
 
         @include blue-ring;
 
         &::before {
             top: 18%;
-            left: 53%;
+            left: 42%;
             width: 133px;
             height: 133px;
             box-shadow: 0 0 0 30px #2429ff;
@@ -94,6 +102,23 @@
             z-index: -1;
         }
     }
+
+    @include respond-to($desktop) {
+        top: -100px;
+        height: 115%;
+        left: -800px;
+        background-image: url(../image/desktop/price-bg-desktop@1x.png);
+
+        @include respond-to($retina) {
+            background-image: url(../image/desktop/price-bg-desktop@2x.png);
+        }
+
+        @include blue-ring;
+
+        &::before {
+            left: 53%;
+        }
+    }
 }
 
 .price__title {
@@ -104,22 +129,33 @@
 }
 
 .price__title-bg {
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         display: block;
         position: absolute;
+        right: 40px;
+        top: -40px;
+        width: 130px;
+        height: 130px;
+        background-image: url(../image/q@1x.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        padding: 0;
+        margin: 0;
+
+        @include respond-to($retina) {
+            background-image: url(../image/q@2x.png);
+        }
+    }
+
+    @include respond-to($desktop) {
         right: 0;
         top: -60px;
         width: 220px;
         height: 220px;
-        background-image: url(../../image/q@1x.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        padding: 60px 0;
-        margin: 0;
 
         @include respond-to($retina) {
-            background-image: url(../../image/q@2x.png);
+            background-image: url(../image/q@2x.png);
         }
     }
 }

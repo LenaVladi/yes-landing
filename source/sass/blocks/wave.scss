@@ -2,13 +2,21 @@
     width: 80px;
     height: 13px;
     position: absolute;
-    background-image: url(../../image/wave.png );
+    background-image: url(../image/wave.png );
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @include respond-to($desktop) {
+        width: 120px;
+        height: 16px;
+        background-image: url(../image/wave-tablet.png );
+    }
 
      @include respond-to($desktop) {
-         width: 140px;
-         height: 20px;
-         background-size: 100%;
+        width: 140px;
+        height: 20px;
+        background-size: 100%;
+        background-image: url(../image/wave-desktop.png );
      }
 
     &--top {
@@ -27,14 +35,14 @@
             background-color: $decor-color;
         }
 
-         @include respond-to($desktop) {
-            top: 0;
+         @include respond-to($tablet) {
+            top: -15%;
             left: 80%;
 
-             &::after {
+            &::after {
                 top: 120px;
                 right: -20px;
-             }
+            }
 
             &::before {
                 content: "";
@@ -48,10 +56,19 @@
                 background-color: $decor-color;
             }
         }
+
+        @include respond-to($desktop) {
+            top: 0;
+        }
     }
 
     &--bottom {
         top: 47%;
+
+        @include respond-to($tablet) {
+            top: 0;
+            left: 40%;
+        }
 
         @include respond-to($desktop) {
             top: 17%;
@@ -64,6 +81,11 @@
         height: 15px;
         top: 13%;
         right: 10%;
+
+        @include respond-to($tablet) {
+            top: 63%;
+            right: 80%;
+        }
 
         @include respond-to($desktop) {
             top: 70%;

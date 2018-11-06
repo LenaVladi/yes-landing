@@ -13,21 +13,40 @@
 .about-course__list {
     @include ul-none;
 
+    @include respond-to($tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+
     @include respond-to($desktop) {
         display: flex;
+        // flex-wrap: nowrap;
     }
 }
 
 .about-course__profile {
     margin-bottom: 40px;
 
+    @include respond-to($tablet) {
+        width: 50%;
+        flex-basis: 50%;
+        margin-right: 0;
+        padding-right: 30px;
+    }
+
     @include respond-to($desktop) {
         width: 30%;
-        margin-right: 40px;
+        flex-basis: 33%;
+        padding-right: 40px;
     }
+}
+
+.profile__picture, .profile__picture .profile__img {
+    width: 100%;
 }
 
 .about-course__profile p {
     text-align: left;
-    padding-right: 15px;
+    padding-right: 14px;
 }

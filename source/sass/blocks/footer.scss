@@ -9,15 +9,19 @@
 .footer__inner {
     @include inner;
 
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         display: flex;
         justify-content: space-between;
         position: relative;
     }
+
+    @include respond-to($desktop) {
+        // inherit tablet
+    }
 }
 
 .footer__logo-wrap {
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         text-align: left;
         width: 30%;
 
@@ -31,13 +35,18 @@
     width: 190px;
     margin: 20px auto;
 
+    @include respond-to($tablet) {
+        display: none;
+    }
+
     @include respond-to($desktop) {
+        display: initial;
         margin: 0;
     }
 }
 
 .footer p span {
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         display: none;
     }
 }
@@ -45,15 +54,26 @@
 p.footer__logo-desc {
     display: none;
 
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
+        width: auto;
         display: block;
         text-align: left;
         margin: 0;
+
+        .tablet-only {
+            display: block;
+        }
+    }
+
+    @include respond-to($desktop) {
+        .tablet-only {
+            display: none;
+        }
     }
 }
 
 .footer__contact {
-     @include respond-to($desktop) {
+     @include respond-to($tablet) {
         position: relative;
         display: flex;
         justify-content: flex-end;

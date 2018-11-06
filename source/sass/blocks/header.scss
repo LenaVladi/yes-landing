@@ -2,7 +2,7 @@
     margin: 0 auto;
     padding: 25px 15px 0;
     min-width: 320px;
-    background-image: url(../../image/mobile/intro-bg-mobile@1x.png);
+    background-image: url(../image/mobile/intro-bg-mobile@1x.png);
     background-size: 75%;
     background-position: center top;
     background-repeat: no-repeat;
@@ -11,14 +11,14 @@
     @include blue-ring;
 
     @include respond-to($retina) {
-      background-image: url(../../image/mobile/intro-bg-mobile@2x.png);
+      background-image: url(../image/mobile/intro-bg-mobile@2x.png);
     }
 
     @include respond-to($tablet) {
       padding-bottom: 40px;
-      background-image: url(../../image/tablet/intro-text-bg-tablet.png);
+      background-image: url(../image/tablet/intro-text-bg-tablet.png);
       background-size: contain;
-      background-position: center;
+      background-position: center 35%;
       background-repeat: no-repeat;
     }
 
@@ -54,10 +54,12 @@
     justify-content: space-between;
 
     @include respond-to($tablet) {
-      position: absolute;
+      position: relative;
       left: 0;
       width: 100%;
+      max-width: 755px;
       padding: 0 20px;
+      margin: 0 auto;
     }
 
     @include respond-to($desktop) {
@@ -72,6 +74,8 @@
     display: flex;
     justify-content: flex-end;
     width: 80%;
+    margin: 0;
+    font-size: 15px;
   }
 }
 
@@ -83,7 +87,7 @@
     @include caption-after;
 
     @include respond-to($tablet) {
-      margin-top: 25%;
+      margin-top: 15%;
     }
 }
 
@@ -119,19 +123,24 @@
 .header__wrap {
   @include respond-to($tablet) {
       padding: 5% 5% 5% 40%;
-      background-image: url(../../image/img0-mobile@2x.png);
+      background-image: url(../image/tablet/intro-bg-tablet@1x.png);
       background-size: 40%;
       background-position: left center;
       background-repeat: no-repeat;
+
+      @include respond-to($retina) {
+        background-image: url(../image/tablet/intro-bg-tablet@2x.png);
+        background-position: left 0;
+      }
   }
 
   @include respond-to($desktop) {
     padding: 5% 5% 5% 28%;
     text-align: left;
-    background-image: url(../../image/desktop/intro-bg-desktop@1x.png);
+    background-image: url(../image/desktop/intro-bg-desktop@1x.png);
 
     @include respond-to($retina) {
-      background-image: url(../../image/desktop/intro-bg-desktop@2x.png);
+      background-image: url(../image/desktop/intro-bg-desktop@2x.png);
     }
   }
 }

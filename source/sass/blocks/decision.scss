@@ -2,20 +2,24 @@
     padding: 85px 15px 0;
 
     @include respond-to($tablet) {
-      padding-top: 120px;
-      background-image: url(../../image/decision-tablet-bg.png);
+      padding-top: 80px;
+      margin: 80px auto;
+      background-image: url(../image/tablet/decision-bg-tablet@1x.png);
       background-repeat: no-repeat;
       background-position: right top;
       background-size: 50%;
+
+      @include respond-to($retina) {
+        background-image: url(../image/tablet/decision-bg-tablet@2x.png);
+      }
     }
 
     @include respond-to($desktop) {
-        background-image: url(../../image/desktop/decision-bg-desktop@1x.png);
-        background-size: contain;
+        background-image: url(../image/desktop/decision-bg-desktop@1x.png);
         padding-top: 140px;
 
-        @include respond-to($tablet) {
-            background-image: url(../../image/desktop/decision-bg-desktop@2x.png);
+        @include respond-to($retina) {
+            background-image: url(../image/desktop/decision-bg-desktop@2x.png);
         }
     }
 }
@@ -63,6 +67,10 @@
 
     @include respond-to($tablet) {
       padding: 0 20px 0 0;
+
+      &:last-child {
+        padding: 0 40px;
+      }
     }
 
     @include respond-to($desktop) {

@@ -75,19 +75,20 @@
 .advertisign__title {
     padding: 15% 18%;
     margin: 0;
-    background-image: url(../../image/q@1x.png);
+    background-image: url(../image/q@1x.png);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: 90% center;
 
     @include caption-style;
 
     @include respond-to($retina) {
-      background-image: url(../../image/q@2x.png);
+      background-image: url(../image/q@2x.png);
     }
 
     @include respond-to($tablet) {
-      width: 250px;
-      padding: 7% 0;
+      width: 300px;
+      padding: 5% 3% 5% 0;
     }
 
     @include respond-to($desktop) {
@@ -137,8 +138,9 @@
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: space-between;
     margin: 40px 0;
-
+    
     .advertisign__img {
       width: 100%;
     }
@@ -147,6 +149,18 @@
       .advertisign__picture {
         order: -1;
         width: 50%;
+      }
+    }
+  }
+
+  @include respond-to($tablet) {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:nth-child(odd) {
+      .advertisign__num {
+        left: 60%;
       }
     }
   }
@@ -170,7 +184,7 @@
 
     &:nth-child(2) {
       .advertisign__num {
-        left: 40%;
+        left: 50%;
       }
     }
 

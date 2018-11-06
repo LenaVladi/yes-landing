@@ -1,24 +1,36 @@
 .probe {
     position: relative;
     padding: 100% 15px 0;
-    background-image: url(../../image/mobile/probe-bg-mobile@1x.png);
+    background-image: url(../image/mobile/probe-bg-mobile@1x.png);
     background-size: 50%;
     background-position: left center;
     background-repeat: no-repeat;
 
     @include respond-to($retina) {
-        background-image: url(../../image/mobile/probe-bg-mobile@2x.png);
+        background-image: url(../image/mobile/probe-bg-mobile@2x.png);
+    }
+
+    @include respond-to($tablet) {
+        padding-top: 20px;
+        margin: 80px 0;
+        background-image: url(../image/tablet/probe-bg-tablet@1x.png);
+        background-size: 40%;
+        background-position: left 80%;
+
+        @include respond-to($retina) {
+            background-image: url(../image/tablet/probe-bg-tablet@2x.png);
+        }
     }
 
     @include respond-to($desktop) {
         padding-top: 110px;
         margin: 80px 0;
-        background-image: url(../../image/desktop/probe-bg-desktop@1x.png);
+        background-image: url(../image/desktop/probe-bg-desktop@1x.png);
         background-size: 50%;
         background-position: left center;
 
         @include respond-to($retina) {
-            background-image: url(../../image/desktop/probe-bg-desktop@2x.png);
+            background-image: url(../image/desktop/probe-bg-desktop@2x.png);
         }
     }
 }
@@ -37,6 +49,12 @@
 .probe__inner {
     @include inner;
 
-    padding-left: 45%;
-    text-align: left;
+    @include respond-to($tablet) {
+        padding-left: 40%;
+        text-align: left;
+    }
+
+    @include respond-to($desktop) {
+        padding-left: 45%;
+    }
 }

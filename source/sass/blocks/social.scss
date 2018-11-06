@@ -3,7 +3,7 @@
 
     margin-bottom: 20px;
 
-    @include respond-to($desktop) {
+    @include respond-to($tablet) {
         position: absolute;
         top: 0;
     }
@@ -21,25 +21,25 @@
     margin: 0;
 
     &--vk {
-        background-image: url(../../image/vk@1x.png);
+        background-image: url(../image/vk@1x.png);
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     &--insta {
-        background-image: url(../../image/insta@1x.png);
+        background-image: url(../image/insta@1x.png);
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     &--yt {
-        background-image: url(../../image/yt@1x.png);
+        background-image: url(../image/yt@1x.png);
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     &--ok {
-        background-image: url(../../image/ok@1x.png);
+        background-image: url(../image/ok@1x.png);
         background-repeat: no-repeat;
         background-position: center center;
     }

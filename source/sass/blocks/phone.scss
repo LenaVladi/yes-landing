@@ -11,6 +11,10 @@
     &--footer {
         margin: 0 auto;
 
+        @include respond-to($tablet) {
+            margin: 0 0 0 50px;
+        }
+
         @include respond-to($desktop) {
             margin: 0 0 0 50px;
         }
