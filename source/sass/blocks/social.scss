@@ -7,6 +7,10 @@
         position: absolute;
         top: 0;
     }
+
+    @include respond-to($desktop) {
+        top: -10px;
+    }
 }
 
 .social__item {

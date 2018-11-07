@@ -19,13 +19,22 @@
             margin: 0 0 0 50px;
         }
     }
+
+    
 }
 
 .phone__number {
     color: black;
+    transition: all 0.2s linear;
 
     @include respond-to($tablet) {
       margin: 0 20px;
+    }
+
+    @include respond-to($hover) {
+        &:hover {
+            color: darken( $decor-color, 15% );
+        }
     }
 }
 
@@ -35,4 +44,13 @@
     line-height: 1.8;
     border-bottom: 2px solid $main-color;
     background-color: transparent;
+    transition: all 0.2s linear;
+
+
+    @include respond-to($hover) {
+        &:hover {
+            color: darken( $main-color, 15% );
+            border-bottom: 2px solid darken( $main-color, 15% );
+        }
+    }
 }

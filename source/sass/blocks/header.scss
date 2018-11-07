@@ -135,13 +135,17 @@
   }
 
   @include respond-to($desktop) {
-    padding: 5% 5% 5% 28%;
+    padding: 5% 5% 5% 40%;
     text-align: left;
     background-image: url(../image/desktop/intro-bg-desktop@1x.png);
 
     @include respond-to($retina) {
       background-image: url(../image/desktop/intro-bg-desktop@2x.png);
     }
+  }
+
+  @media (min-width: 1400px) {
+    padding: 5% 5% 5% 30%;
   }
 }
 

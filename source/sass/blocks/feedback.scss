@@ -20,6 +20,7 @@
 .feedback__item {
     display: none;
     padding: 40px 0 0;
+    cursor: grab;
 
     // @include respond-to($desktop) {
     //     display: none;

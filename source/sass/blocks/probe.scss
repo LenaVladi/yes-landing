@@ -1,9 +1,9 @@
 .probe {
     position: relative;
-    padding: 100% 15px 0;
+    padding: 80% 15px 0;
     background-image: url(../image/mobile/probe-bg-mobile@1x.png);
-    background-size: 50%;
-    background-position: left center;
+    background-size: contain;
+    background-position: top;
     background-repeat: no-repeat;
 
     @include respond-to($retina) {
