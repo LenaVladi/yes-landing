@@ -1,0 +1,45 @@
+.simple-toright, .simple-toup, .simple-toleft, .simple-todown {
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+}
+
+.simple-toright {
+  animation-name: toRightAnimation;
+}
+
+.simple-toup {
+  animation-name: toUpAnimation;
+}
+
+.simple-toleft {
+  animation-name: toLeftAnimation;
+}
+
+.simple-todown {
+  animation-name: toDownAnimation;
+}
+
+@keyframes toRightAnimation {
+  0% { transform: translateX(-100px); opacity: 0;  }
+  50% { transform: translateX(0) scale(1, 1); opacity: 0.8;  }
+  70% { opacity: 1; }
+}
+
+@keyframes toLeftAnimation {
+  0% { transform: translateX(100px); opacity: 0;  }
+  50% { transform: translateX(0) scale(1, 1); opacity: 0.8;  }
+  70% { opacity: 1; }
+}
+
+@keyframes toUpAnimation {
+  0% { transform: translateY(50px) scale(0.9, 0.9); opacity: 0;  }
+  50% { transform: translateY(0) scale(1, 1); opacity: 0.8;  }
+  70% { opacity: 1; }
+}
+
+@keyframes toDownAnimation {
+  0% { transform: translateY(-50px) scale(0.9, 0.9); opacity: 0;  }
+  50% { transform: translateY(0) scale(1, 1); opacity: 0.8;  }
+  70% { opacity: 1; }
+}
