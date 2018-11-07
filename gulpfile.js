@@ -84,7 +84,7 @@ gulp.task("clean", function () {
 
 gulp.task("compress", function (cb) {
   pump([
-    gulp.src("source/js/*.js"),
+    gulp.src("source/scripts/*.js"),
     uglify()
   ],
     cb
@@ -92,7 +92,8 @@ gulp.task("compress", function (cb) {
     .pipe(rename(function (path) {
       path.basename += ".min"
     }))
-    .pipe(gulp.dest("docs/js"));
+    .pipe(gulp.dest("docs/scripts"))
+    .pipe(gulp.dest("source/scripts"));
 });
 
 gulp.task("build", function (done) {
