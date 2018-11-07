@@ -13,28 +13,28 @@
     @include caption-after;
 }
 
+.feedback .feedback__item-container {
+    padding-bottom: 50px;
+}
+
 .feedback__list {
     @include ul-none;
+    display: flex;
 }
 
 .feedback__item {
-    display: none;
+    opacity: 0;
     padding: 40px 0 0;
     cursor: grab;
 
-    // @include respond-to($desktop) {
-    //     display: none;
-  
-    // }
+    @include respond-to($tablet) {
+        display: flex;
+    }
 
     &.active {
-        display: block;
+        opacity: 1;
 
         @include respond-to($tablet) {
-            display: flex;
-        }
-
-        @include respond-to($desktop) {
             display: flex;
         }
     }

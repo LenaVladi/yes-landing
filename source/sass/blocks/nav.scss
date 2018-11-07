@@ -2,16 +2,18 @@
     @include ul-none;
 }
 
-.nav__prev, .nav__this, .nav__next {
+span.swiper-pagination-bullet {
     display: inline-block;
     margin: 31px 5px 0;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: $disable-color;
+    opacity: 1;
+    transition: all 0.1s linear;
 }
 
-.nav__this {
+span.active, span.swiper-pagination-bullet-active  {
     background-color: $main-color;
     box-shadow: 0 4px 10px rgba(245, 17, 44, 0.58);
 }

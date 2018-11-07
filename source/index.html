@@ -280,8 +280,9 @@
         <section class="feedback">
             <div class="feedback__inner simple-animate-block">
             <h2 class="feedback__title">Отзывы студентов</h2>
-            <ul class="feedback__list">
-                <li class="feedback__item simple-up active">
+            <div class="feedback__item-container swiper-container">
+            <ul class="feedback__list swiper-wrapper">
+                <li class="feedback__item simple-up swiper-slide active">
                     <picture class="feedback__picture">
                         <source type="image/webp" media="(min-width: 1200px)" srcset="image/desktop/feedback-photo-desktop@1x.webp 1x, image/desktop/feedback-photo-desktop@2x.webp 2x">
                         <source type="image/webp" srcset="image/mobile/feedback-photo-mobile.webp 1x, image/mobile/feedback-photo-mobile.webp 2x">
@@ -298,8 +299,14 @@
                     <a href="" class="feedback__link-user">Вконтакте</a>
                     </div>
                 </li>
-                <li class="feedback__item simple-up">
-                    <img src="image/img13-mobile@1x.png" alt="Александра Иванова" width="156" class="feedback__img">
+                <li class="feedback__item simple-up swiper-slide">
+                    <picture class="feedback__picture">
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="image/desktop/feedback-photo-desktop@1x.webp 1x, image/desktop/feedback-photo-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="image/mobile/feedback-photo-mobile.webp 1x, image/mobile/feedback-photo-mobile.webp 2x">
+                        <source media="(min-width: 1200px)" srcset="image/desktop/feedback-photo-desktop@1x.png 1x, image/desktop/feedback-photo-desktop@2x.png 2x">
+                        <img class="feedback__img" src="image/mobile/feedback-photo-mobile@1x.png" srcset="image/mobile/feedback-photo-mobile@2x.png 2x"
+                            alt="Александра Иванова" width="156">
+                    </picture>
                     <div class="feedback__item-text">
                     <b>Александра Иванова</b>
                     <p>Курс прошел незаметно и оставил после себя только хорошие воспоминания. Нашу группу на постоянной основе вела Алла, Настя
@@ -309,23 +316,33 @@
                     <a href="" class="feedback__link-user">Вконтакте</a>
                     </div>
                 </li>
-                <li class="feedback__item simple-up">
+                <li class="feedback__item simple-up swiper-slide">
+                    <picture class="feedback__picture">
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="image/desktop/feedback-photo-desktop@1x.webp 1x, image/desktop/feedback-photo-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="image/mobile/feedback-photo-mobile.webp 1x, image/mobile/feedback-photo-mobile.webp 2x">
+                        <source media="(min-width: 1200px)" srcset="image/desktop/feedback-photo-desktop@1x.png 1x, image/desktop/feedback-photo-desktop@2x.png 2x">
+                        <img class="feedback__img" src="image/mobile/feedback-photo-mobile@1x.png" srcset="image/mobile/feedback-photo-mobile@2x.png 2x"
+                            alt="Александра Иванова" width="156">
+                    </picture>
                     <div class="feedback__item-text">
-                    <img src="image/img13-mobile@1x.png" alt="Александра Иванова" width="156" class="feedback__img">
-                    <b>Александра Иванова</b>
-                    <p>Курс прошел незаметно и оставил после себя только хорошие воспоминания. Нашу группу на постоянной основе вела Алла, Настя
-                    и Женя приходили к нам для нарабатывания практики общения. Неделю назад были с мужем в Лондоне - хоть люди разные и речь
-                    у всех разная, но было так легко и спокойно! Мы ни разу не заблудились, в аэропорту меня водила за собой пожилая пара в качестве
-                    переводчика. Спасибо вам, это было очень полезно!</p>
-                    <a href="" class="feedback__link-user">Вконтакте</a>
+                        <b>Александра Иванова</b>
+                        <p>Курс прошел незаметно и оставил после себя только хорошие воспоминания. Нашу группу на постоянной основе
+                            вела Алла, Настя
+                            и Женя приходили к нам для нарабатывания практики общения. Неделю назад были с мужем в Лондоне - хоть люди
+                            разные и речь
+                            у всех разная, но было так легко и спокойно! Мы ни разу не заблудились, в аэропорту меня водила за собой
+                            пожилая пара в качестве
+                            переводчика. Спасибо вам, это было очень полезно!</p>
+                        <a href="" class="feedback__link-user">Вконтакте</a>
                     </div>
                 </li>
             </ul>
-            <ul class="feedback__nav nav">
+            <ul class="feedback__nav nav swiper-pagination">
                 <li class="nav__prev"></li>
                 <li class="nav__this"></li>
                 <li class="nav__next"></li>
             </ul>
+            </div>
             </div>
         </section>
         <section class="probe">
@@ -365,7 +382,10 @@
             </div>
         </div>
     </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+    <script src="scripts/script.js"></script>
     <script src="scripts/animate.js"></script>
 </body>
 </html>
